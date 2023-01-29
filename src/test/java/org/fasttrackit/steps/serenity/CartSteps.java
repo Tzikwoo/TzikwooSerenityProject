@@ -36,4 +36,8 @@ public class CartSteps extends ScenarioSteps {
     public void verifySuccesfullyAdded(String message){
         cartPage.isAddedMessageDisplayed(message);
     }
+    @Step
+    public void clickCheckoutButton(){
+        cartPage.clickProceedToCheckoutButton();
+    }
 }
