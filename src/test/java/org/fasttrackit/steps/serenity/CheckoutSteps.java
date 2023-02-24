@@ -5,9 +5,8 @@ import net.thucydides.core.steps.ScenarioSteps;
 import org.fasttrackit.pages.CheckoutPage;
 import org.fasttrackit.pages.ConfirmationPage;
 
-public class CheckoutSteps extends ScenarioSteps {
-    private CheckoutPage checkoutPage;
-    private ConfirmationPage confirmationPage;
+public class CheckoutSteps extends BaseSteps {
+
     @Step
     public void selectNewShippingAddress(){
         checkoutPage.selectNewShippingAddress();

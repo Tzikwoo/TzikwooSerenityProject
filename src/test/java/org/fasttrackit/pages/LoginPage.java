@@ -12,6 +12,8 @@ public class LoginPage extends PageObject {
     private WebElementFacade passwordField;
     @FindBy (id = "send2")
     private WebElementFacade loginButton;
+    @FindBy(id = "advice-required-entry-pass")
+    private WebElementFacade requiredPasswordWElement;
 
     public void setEmailField(String email){
         typeInto(emailField,email);
@@ -21,5 +23,9 @@ public class LoginPage extends PageObject {
     }
     public void clickOnLoginButton(){
         clickOn(loginButton);
+    }
+    public String getRequiredPasswordText(){
+        waitFor(requiredPasswordWElement);
+        return requiredPasswordWElement.getText();
     }
 }

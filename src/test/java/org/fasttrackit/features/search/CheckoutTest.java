@@ -13,19 +13,7 @@ import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
 @RunWith(SerenityRunner.class)
-public class CheckoutTest {
-    @Managed(uniqueSession = true)
-    public WebDriver driver;
-    @Before
-    public void maximize(){
-        driver.manage().window().maximize();
-    }
-    @Steps
-    private LoginSteps loginSteps;
-    @Steps
-    private CartSteps cartSteps;
-    @Steps
-    private CheckoutSteps checkoutSteps;
+public class CheckoutTest extends BaseTest{
     @Ignore
     @Test
     public void checkoutWithLoginTest(){

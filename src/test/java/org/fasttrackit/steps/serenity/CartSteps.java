@@ -4,13 +4,7 @@ import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
 import org.fasttrackit.pages.*;
 
-public class CartSteps extends ScenarioSteps {
-    private HomePage homePage;
-    private LoginPage loginPage;
-    private ProductPage productPage;
-    private SaleResultsPage saleResultsPage;
-    private CartPage cartPage;
-
+public class CartSteps extends BaseSteps {
     @Step//Selecteaza link-ul de sale de pe homepage.
     public void clickOnSaleCategory(){
         homePage.clickOnSaleCategory();

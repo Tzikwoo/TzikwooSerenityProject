@@ -6,29 +6,17 @@ import net.thucydides.core.annotations.Steps;
 import org.fasttrackit.steps.serenity.LoginSteps;
 import org.fasttrackit.steps.serenity.SearchSteps;
 import org.fasttrackit.steps.serenity.WishlistSteps;
+import org.fasttrackit.utils.Constants;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
 @RunWith(SerenityRunner.class)
-public class WishlistTest {
-    @Managed(uniqueSession = true)
-    public WebDriver driver;
-    @Before
-    public void maximize(){
-        driver.manage().window().maximize();
-    }
-    @Steps
-    private LoginSteps loginSteps;
-    @Steps
-    private SearchSteps searchSteps;
-    @Steps
-    private WishlistSteps wishlistSteps;
-
+public class WishlistTest extends BaseTest{
     @Test
     public void addToWishlistWithLoginTest (){
-        loginSteps.doLogin("bogdi_perte98@yahoo.com","300798");
+        loginSteps.doLogin(Constants.USER_EMAIL,Constants.USER_PASSWORD);
         searchSteps.searchAndClick("SHIRT");
         searchSteps.clickViewDetails();
         wishlistSteps.clickOnWishlistLink();

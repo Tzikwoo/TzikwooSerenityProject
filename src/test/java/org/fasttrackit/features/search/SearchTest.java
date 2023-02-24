@@ -11,15 +11,7 @@ import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
 @RunWith(SerenityRunner.class)
-public class SearchTest {
-    @Managed(uniqueSession = true)
-    public WebDriver driver;
-    @Before
-    public void maximize(){
-        driver.manage().window().maximize();
-    }
-    @Steps
-    private SearchSteps searchSteps;
+public class SearchTest extends BaseTest{
     @Test
     public void searchForSpecificItemTest(){
         searchSteps.navigateToHomepage();

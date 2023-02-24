@@ -1,19 +1,10 @@
 package org.fasttrackit.steps.serenity;
-
 import net.thucydides.core.annotations.Step;
-import net.thucydides.core.steps.ScenarioSteps;
-import org.fasttrackit.pages.AccountPage;
-import org.fasttrackit.pages.HomePage;
-import org.fasttrackit.pages.LoginPage;
+import org.junit.Assert;
 
-public class LoginSteps extends ScenarioSteps {
-    private HomePage homePage;
-    private LoginPage loginPage;
-    private AccountPage accountPage;
-
+public class LoginSteps extends BaseSteps {
     @Step
     public void navigateToLoginPage(){
-        homePage.open();
         homePage.clickOnAccountButton();
         homePage.clickOnLoginLink();
     }
@@ -39,5 +30,9 @@ public class LoginSteps extends ScenarioSteps {
         typeUserEmail(email);
         typeUserPassword(password);
         clickLogin();
+    }
+    @Step
+    public void checkPasswordFieldRequired(){
+        Assert.assertEquals("This is a required field.",loginPage.getRequiredPasswordText());
     }
 }

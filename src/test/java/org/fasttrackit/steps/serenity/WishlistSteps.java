@@ -6,9 +6,7 @@ import net.thucydides.core.steps.ScenarioSteps;
 import org.fasttrackit.pages.ProductPage;
 import org.fasttrackit.pages.WishlistPage;
 
-public class WishlistSteps extends ScenarioSteps {
-    private ProductPage productPage;
-    private WishlistPage wishlistPage;
+public class WishlistSteps extends BaseSteps {
 
     @Step
     public void clickOnWishlistLink(){

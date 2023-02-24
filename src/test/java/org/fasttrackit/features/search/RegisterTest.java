@@ -10,15 +10,7 @@ import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
 @RunWith(SerenityRunner.class)
-public class RegisterTest {
-    @Managed(uniqueSession = true)
-    public WebDriver driver;
-    @Before
-    public void maximize(){
-        driver.manage().window().maximize();
-    }
-    @Steps
-    private RegisterSteps registerSteps;
+public class RegisterTest extends BaseTest {
     @Test
     public void newUserRegisterTest(){
         registerSteps.navigateToRegisterPage();

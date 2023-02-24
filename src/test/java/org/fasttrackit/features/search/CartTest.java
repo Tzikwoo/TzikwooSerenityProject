@@ -11,17 +11,7 @@ import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
 @RunWith(SerenityRunner.class)
-public class CartTest {
-    @Managed(uniqueSession = true)
-    public WebDriver driver;
-    @Before
-    public void maximize(){
-        driver.manage().window().maximize();
-    }
-    @Steps
-    private LoginSteps loginSteps;
-    @Steps
-    private CartSteps cartSteps;
+public class CartTest extends BaseTest {
     @Test
     public void addToCartTest(){
     loginSteps.doLogin("bogdi_perte98@yahoo.com","300798");

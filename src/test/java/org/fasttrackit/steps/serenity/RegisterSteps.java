@@ -6,14 +6,10 @@ import org.fasttrackit.pages.AccountPage;
 import org.fasttrackit.pages.HomePage;
 import org.fasttrackit.pages.RegisterPage;
 
-public class RegisterSteps extends ScenarioSteps {
-    private HomePage homePage;
-    private RegisterPage registerPage;
-    private AccountPage accountPage;
+public class RegisterSteps extends BaseSteps {
 
     @Step
     public void navigateToRegisterPage(){
-        homePage.open();
         homePage.clickOnAccountButton();
         homePage.clickOnRegisterLink();
     }
